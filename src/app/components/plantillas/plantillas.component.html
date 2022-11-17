@@ -1,0 +1,31 @@
+<div>
+    <h1>Plantillas Funcion Api</h1>
+    <form #plantillasForm="ngForm" (ngSubmit)="buscarEmpleados()">
+        <label>Seleccione una o varias funciones: </label>
+        <select class="form-control" #cajafunciones name="cajafunciones" multiple>
+            <option *ngFor="let fun of funciones">
+                {{fun}}
+            </option>
+        </select>
+        <button class="btn btn-info" style="margin-top: 10px;">Buscar empleados</button>
+    </form>
+    <hr/>
+    <table class="table table-bordered table-info" *ngIf="plantillas" style="text-align: center; border: 2px solid;">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Apellido</th>
+                <th>Funcion</th>
+                <th>Salario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let plan of plantillas">
+                <td>{{plan.idEmpleado}}</td>
+                <td>{{plan.apellido}}</td>
+                <td>{{plan.funcion}}</td>
+                <td>{{plan.salario}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

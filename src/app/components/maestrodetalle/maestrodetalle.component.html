@@ -1,0 +1,8 @@
+<div>
+    <h1>Maestro Detalle Empleados Routing</h1>
+    <div *ngFor="let emp of empleados">
+        <h3>{{emp.apellido}}</h3>
+        <a class="btn btn-success" [routerLink]="['/detallesempleado', emp.idEmpleado]">Detalles</a>
+        <hr/>
+    </div>
+</div>

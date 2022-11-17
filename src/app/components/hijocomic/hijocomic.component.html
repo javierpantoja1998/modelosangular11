@@ -1,0 +1,9 @@
+<div style="text-align: center;">
+    <h1 style="color: blue"><span style="color: black">Nombre: </span>{{comicHijo.nombre}}</h1>
+    <img src="{{comicHijo.imagen}}" style="width:250px; height: 250px;"/>
+    <h2 style="color: royalblue"><span style="color: black">Descripcion: </span>{{comicHijo.descripcion}}</h2>
+    <button (click)="seleccionarFavoritoHijo()" class="btn" style="border: 1px solid; margin-bottom: 5px;">Seleccionar Favorito</button><br/>
+    <button (click)="eliminarComicHijo()" class="btn btn-danger" style="margin-bottom: 5px;">Eliminar Comic</button><br/>
+    <button (click)="modificarComicHijo()" class="btn btn-info">Modificar Comic</button>
+    <hr/>
+</div>

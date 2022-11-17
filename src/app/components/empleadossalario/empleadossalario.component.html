@@ -1,0 +1,27 @@
+<div>
+    <h1 style="color: blue">Empleados Salario Api</h1>
+    <form #empleadosForm="ngForm" (ngSubmit)="mostrarEmpleadosSalario()">
+        <label>Introduzca salario: </label>
+        <input type="number" class="form-control" name="cajasalario" #cajasalario/>
+        <button class="btn btn-warning" style="margin-top: 10px;">Buscar empleados</button>
+    </form>
+    <hr/>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Oficio</th>
+                <th>Salario</th>
+                <th>Departamentos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of empleados">
+                <td>{{emp.apellido}}</td>
+                <td>{{emp.oficio}}</td>
+                <td>{{emp.salario}}</td>
+                <td>{{emp.departamento}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

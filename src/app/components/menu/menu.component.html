@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <a [routerLink]="['/']" ><img src="./../../../assets/images/logoHome.jpg" style="width: 80px;"/></a>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/padre']">Comics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/comicsinyeccion']">Comics Inyeccion</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Servicios Api
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" [routerLink]="['/personasapi']">Personas Api</a>
+              </li>
+              <li>
+                <a class="dropdown-item" [routerLink]="['/empleadossalario']">Empleados Api</a>
+              </li>
+              <li>
+                <a class="dropdown-item" [routerLink]="['/empleadosoficio']">Empleados Oficio Api</a>
+              </li>
+              <li>
+                <a class="dropdown-item" [routerLink]="['/plantillasfuncion']">Plantillas Funcion Api</a>
+              </li>
+              <li>
+                <a class="dropdown-item" [routerLink]="['/maestrodetalle']">Maestro Detalle Empleados Api</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

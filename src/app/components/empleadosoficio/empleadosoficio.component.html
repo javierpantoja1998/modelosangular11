@@ -1,0 +1,31 @@
+<div>
+    <h1>Empleados Oficio Api</h1>
+    <form #empleadosForm="ngForm" (ngSubmit)="buscarEmpleados()">
+        <label>Seleccione un oficio: </label>
+        <select class="form-control" #selectOficio name="selectOficio">
+            <option *ngFor="let oficio of oficios">
+                {{oficio}}
+            </option>
+        </select>
+        <button class="btn btn-info" style="margin-top: 10px;">Buscar empleados</button>
+    </form>
+    <hr/>
+    <table class="table table-bordered table-info" *ngIf="empleados" style="text-align: center; border: 2px solid;">
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Oficio</th>
+                <th>Salario</th>
+                <th>Departamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of empleados">
+                <td>{{emp.apellido}}</td>
+                <td>{{emp.oficio}}</td>
+                <td>{{emp.salario}}</td>
+                <td>{{emp.departamento}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

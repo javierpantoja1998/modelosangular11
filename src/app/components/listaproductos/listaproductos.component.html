@@ -1,0 +1,9 @@
+<div>
+    <h1>Productos Model</h1>
+    <div *ngFor="let producto of productos">
+        <h2 style="color: blue"> <span style="color: black">Nombre: </span>{{producto.nombre}}</h2>
+        <h2 style="color: blue"> <span style="color: black">Precio: </span>{{producto.precio}}€</h2>
+        <img src="{{producto.imagen}}" style="width: 250px; height: 250px;"/>
+        <hr/>
+    </div>
+</div>
